@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="闲云如褛漏月光">
+<meta name="description" content="什么是 Async/Await从字面上说async就是’异步’，await可以理解为async的wait，粗略的说async申明函数里有异步调用，await表示紧跟其后的表达式需要等待结果。这和生成器函数很像，甚至可以说async/await就是生成器函数的语法糖。 为什么需要有Async/Await从刀耕火种的回调地狱到后来优雅的promise，直到现在的async/await函数，它们都只是为">
 <meta name="keywords" content="coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="大风起兮">
-<meta property="og:url" content="http://zhengtianchan.top/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="异步解决方案Async&#x2F;Await">
+<meta property="og:url" content="http://zhengtianchan.top/2018/10/26/await/index.html">
 <meta property="og:site_name" content="大风起兮">
-<meta property="og:description" content="闲云如褛漏月光">
+<meta property="og:description" content="什么是 Async/Await从字面上说async就是’异步’，await可以理解为async的wait，粗略的说async申明函数里有异步调用，await表示紧跟其后的表达式需要等待结果。这和生成器函数很像，甚至可以说async/await就是生成器函数的语法糖。 为什么需要有Async/Await从刀耕火种的回调地狱到后来优雅的promise，直到现在的async/await函数，它们都只是为">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-26T10:13:18.671Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大风起兮">
-<meta name="twitter:description" content="闲云如褛漏月光">
+<meta name="twitter:title" content="异步解决方案Async&#x2F;Await">
+<meta name="twitter:description" content="什么是 Async/Await从字面上说async就是’异步’，await可以理解为async的wait，粗略的说async申明函数里有异步调用，await表示紧跟其后的表达式需要等待结果。这和生成器函数很像，甚至可以说async/await就是生成器函数的语法糖。 为什么需要有Async/Await从刀耕火种的回调地狱到后来优雅的promise，直到现在的async/await函数，它们都只是为">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://zhengtianchan.top/">
+  <link rel="canonical" href="http://zhengtianchan.top/2018/10/26/await/">
 
 
 
 
 
-  <title>大风起兮</title>
+  <title>异步解决方案Async/Await | 大风起兮</title>
   
 
 
@@ -154,8 +155,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -228,9 +228,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -260,9 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/await/" itemprop="url">异步解决方案Async/Await</a></h1>
+          <h1 class="post-title" itemprop="name headline">异步解决方案Async/Await</h1>
         
 
         <div class="post-meta">
@@ -323,9 +321,7 @@
       
 
       
-        
-          
-            <h3 id="什么是-Async-Await"><a href="#什么是-Async-Await" class="headerlink" title="什么是 Async/Await"></a>什么是 Async/Await</h3><p>从字面上说async就是’异步’，await可以理解为async的wait，粗略的说async申明函数里有异步调用，await表示紧跟其后的表达式需要等待结果。这和<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator" target="_blank" rel="noopener">生成器函数</a>很像，甚至可以说async/await就是生成器函数的语法糖。</p>
+        <h3 id="什么是-Async-Await"><a href="#什么是-Async-Await" class="headerlink" title="什么是 Async/Await"></a>什么是 Async/Await</h3><p>从字面上说async就是’异步’，await可以理解为async的wait，粗略的说async申明函数里有异步调用，await表示紧跟其后的表达式需要等待结果。这和<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator" target="_blank" rel="noopener">生成器函数</a>很像，甚至可以说async/await就是生成器函数的语法糖。</p>
 <h3 id="为什么需要有Async-Await"><a href="#为什么需要有Async-Await" class="headerlink" title="为什么需要有Async/Await"></a>为什么需要有Async/Await</h3><p>从刀耕火种的回调地狱到后来优雅的promise，直到现在的async/await函数，它们都只是为了更加优雅的实现异步罢了，生成器函数虽然强大，但是仍有不足，它的执行必须依赖执行器，即co模块或者手动去调用next()，而async相较于generator函数有如下优势：</p>
 <ol>
 <li><p>内置执行器，无需额外调用co函数库, 返回值即是promise。</p>
@@ -339,8 +335,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> <span class="function"><span class="title">dosome</span></span>() &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">      await this.app.sql.get(<span class="string">'error'</span>, &#123;id: id&#125;);</span><br><span class="line">    &#125; catch(e) &#123;</span><br><span class="line">      this.ctx.logger.error(e)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Async-Await是否完全取代Promise"><a href="#Async-Await是否完全取代Promise" class="headerlink" title="Async/Await是否完全取代Promise"></a>Async/Await是否完全取代Promise</h3><p>不会。<br>async底层仍然使用promise。而且async并不会使多个请求并发执行，promise遇到await就会停下来等待结果，因此希望多个请求并发运行的时候，最好使用Promise.all();如下图所示分别使用async和Promise.all()调用耗费时间。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> testA &#123;</span><br><span class="line">  <span class="built_in">return</span> new Promise(resolve =&gt; &#123;</span><br><span class="line">    setTimeout(() =&gt; resolve(<span class="string">'A'</span>), 1000);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> testB &#123;</span><br><span class="line">  <span class="built_in">return</span> new Promise(resolve =&gt; &#123;</span><br><span class="line">    setTimeout(() =&gt; resolve(<span class="string">'B'</span>), 2000);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> testC &#123;</span><br><span class="line">  <span class="built_in">return</span> new Promise(resolve =&gt; &#123;</span><br><span class="line">    setTimeout(() =&gt; resolve(<span class="string">'C'</span>), 3000);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">async <span class="keyword">function</span> <span class="function"><span class="title">getABC</span></span>() &#123;</span><br><span class="line">  console.time(<span class="string">'async'</span>);</span><br><span class="line">  const A = await testA();</span><br><span class="line">  const B = await testB();</span><br><span class="line">  const C = await testC();</span><br><span class="line">  console.timeEnd(<span class="string">'async'</span>);</span><br><span class="line">&#125;</span><br><span class="line">async <span class="keyword">function</span> <span class="function"><span class="title">getABC2</span></span>() &#123;</span><br><span class="line">  console.time(<span class="string">'promise'</span>);</span><br><span class="line">  const result = await Promise.all([testA(), testB(), testC()]);</span><br><span class="line">  console.timeEnd(<span class="string">'promise'</span>);</span><br><span class="line">&#125;</span><br><span class="line">getABC();</span><br><span class="line">getABC2();</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -357,12 +351,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -372,10 +366,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -383,6 +378,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -403,8 +402,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -448,6 +456,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-Async-Await"><span class="nav-number">1.</span> <span class="nav-text">什么是 Async/Await</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要有Async-Await"><span class="nav-number">2.</span> <span class="nav-text">为什么需要有Async/Await</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用Async-Await"><span class="nav-number">3.</span> <span class="nav-text">如何使用Async/Await</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误处理"><span class="nav-number">4.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Async-Await是否完全取代Promise"><span class="nav-number">5.</span> <span class="nav-text">Async/Await是否完全取代Promise</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -582,6 +606,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
